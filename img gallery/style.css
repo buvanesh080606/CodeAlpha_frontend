@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F9DFDF linear-gradient(135deg, #e9eef4, #ffffff);
+   
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Filter Buttons */
+.filters button {
+    padding: 10px 23px;
+    margin: 5px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.filters button:hover,
+.filters .active {
+    background: #0054c4;
+    transform: scale(1.05);
+}
+
+/* Gallery */
+.gallery {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+/* Image Card */
+.card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+    padding-bottom: 10px;
+    animation: fadeIn 0.9s ease-in-out;
+    border: 3px solid transparent;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    border-image: linear-gradient(45deg, #ff00cc, #3333ff) 1;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.card p {
+    margin: 10px 0 0;
+    font-weight: 600;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox img {
+    width: 70%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+
+.nav span {
+    color: white;
+    font-size: 45px;
+    margin: 20px;
+    cursor: pointer;
+}

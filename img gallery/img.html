@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 class="title">📸 Modern Image Gallery</h2>
+
+<!-- FILTER BUTTONS -->
+<div class="filters">
+    <button onclick="filterImages('all')" class="active">🌟 All</button>
+    <button onclick="filterImages('nature')">🌿 Nature</button>
+    <button onclick="filterImages('animals')">🐾 Animals</button>
+    <button onclick="filterImages('cities')">🏙️ Cities</button>
+</div>
+
+<!-- IMAGE GALLERY -->
+<div class="gallery">
+
+    <!-- Nature -->
+    <div class="card nature"><img src="images/gf.png.png" onclick="openLightbox(0)"><p>Green Forest</p></div>
+    <div class="card nature"><img src="images/lake.png" onclick="openLightbox(1)"><p>Lake View</p></div>
+    <div class="card nature"><img src="images/mp.png" onclick="openLightbox(2)"><p>Mountain Peak</p></div>
+    <div class="card nature"><img src="images/sunset.png" onclick="openLightbox(3)"><p>Sunset Scenery</p></div>
+
+    <!-- Animals -->
+    <div class="card animals"><img src="images/tiger.png" onclick="openLightbox(4)"><p>Wild Tiger</p></div>
+    <div class="card animals"><img src="images/parrot.png" onclick="openLightbox(5)"><p>Parrot Closeup</p></div>
+    <div class="card animals"><img src="images/elep walk.png" onclick="openLightbox(6)"><p>Elephant Walk</p></div>
+    <div class="card animals"><img src="images/cute puppy.png" onclick="openLightbox(7)"><p>Cute Puppy</p></div>
+
+    <!-- Cities -->
+    <div class="card cities"><img src="images/night lights.png" onclick="openLightbox(8)"><p>Night Lights</p></div>
+    <div class="card cities"><img src="images/street view.png" onclick="openLightbox(9)"><p>Street View</p></div>
+    <div class="card cities"><img src="images/city skyline.png" onclick="openLightbox(10)"><p>City Skyline</p></div>
+    <div class="card cities"><img src="images/bridgesunset.png" onclick="openLightbox(11)"><p>Bridge Sunset</p></div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">✖</span>
+    <img id="lightbox-img">
+
+    <div class="nav">
+        <span onclick="prevImage()">⟵</span>
+        <span onclick="nextImage()">⟶</span>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="calculator-wrapper">
+            <div class="calculator">
+                <div class="calculator-header">
+                    <h1>Calculator</h1>
+                    <p class="keyboard-hint"></p>
+                </div>
+                
+                <div class="display-container">
+                    <div class="operation-indicator" id="operationIndicator"></div>
+                    <div class="display" id="display" data-testid="calculator-display">0</div>
+                </div>
+
+                <div class="button-grid">
+                    <button class="btn btn-function" data-action="clear" data-testid="clear-button">C</button>
+                    <button class="btn btn-function" data-action="backspace" data-testid="backspace-button">⌫</button>
+                    <button class="btn btn-operator" data-action="operation" data-value="÷" data-testid="divide-button">÷</button>
+                    <button class="btn btn-operator" data-action="operation" data-value="×" data-testid="multiply-button">×</button>
+
+                    <button class="btn" data-action="digit" data-value="7" data-testid="digit-7">7</button>
+                    <button class="btn" data-action="digit" data-value="8" data-testid="digit-8">8</button>
+                    <button class="btn" data-action="digit" data-value="9" data-testid="digit-9">9</button>
+                    <button class="btn btn-operator" data-action="operation" data-value="-" data-testid="subtract-button">−</button>
+
+                    <button class="btn" data-action="digit" data-value="4" data-testid="digit-4">4</button>
+                    <button class="btn" data-action="digit" data-value="5" data-testid="digit-5">5</button>
+                    <button class="btn" data-action="digit" data-value="6" data-testid="digit-6">6</button>
+                    <button class="btn btn-operator" data-action="operation" data-value="+" data-testid="add-button">+</button>
+
+                    <button class="btn" data-action="digit" data-value="1" data-testid="digit-1">1</button>
+                    <button class="btn" data-action="digit" data-value="2" data-testid="digit-2">2</button>
+                    <button class="btn" data-action="digit" data-value="3" data-testid="digit-3">3</button>
+                    <button class="btn btn-equals" data-action="operation" data-value="=" data-testid="equals-button">=</button>
+
+                    <button class="btn btn-zero" data-action="digit" data-value="0" data-testid="digit-0">0</button>
+                    <button class="btn" data-action="decimal" data-testid="decimal-button">.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
